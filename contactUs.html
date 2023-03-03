@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Visit Limerick City</title>
+	<meta name="author" content="Stephen Clancy">
+	<meta name="description" content="Limerick City Tourism Site: Assignment 1 RDWD">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/limerick.css">
+	<link rel="icon" type="image/x-icon" href=""/>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("TopMenu");
+          if (x.className === "navHeader") {
+            x.className += " responsive";
+          } else {
+            x.className = "navHeader";
+          }
+        }
+    </script>
+</head>
+
+<body>
+    
+    
+    <!--Header Bar-->
+    
+    <div class="Header">
+            <div class="logo">
+                <a href="Limerick.html"><img src="Images/logolimerick.svg" alt="Limerick Logo Photo: Limerick.ie"></a>
+            </div>
+
+            <nav class="navHeader" id="TopMenu">
+                  <a href="#">Events</a>
+                  <a href="#">Accomadation</a>
+                  <a href="#">Activities</a>
+                  <a href="#">Contact Us</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>              
+            </nav>
+    </div>
+    
+    
+    <!--Form-->
+    
+     <form class="frm" action="http://litstudentprojects.net/rdwd-newsletter-response.php" method="post">
+        
+        <h2 id="formtitle">Newsletter</h2>
+         
+         <p>Stay in the know, sign up to our newsletter.</p>
+        
+            <label for="first_name" class="lbl">First Name:* </label><input type="text" name="first_name" id="first_name" class="fld">
+            
+            <p><label for="last_name" class="lbl">Last Name:* </label>
+            <input type="text" name="last_name" id="last_name" class="fld">
+            </p>
+        
+            <p><label for="email1" class="lbl">Email:* </label>
+            <input type="email" name="email1" id="email1" class="fld">
+            </p>
+    
+            <p><label for="email2" class="lbl">Retype your email:* </label>
+            <input type="email" name="email2" id="email2" class="fld">
+            </p>
+    
+            <p><label for="phone" class="lbl">Phone: </label>
+            <input type="number" name="phone" id="phone" class="fld">
+            </p>
+            
+            <fieldset>
+            <legend>Your Interests? (Tick all that apply)</legend>
+            <div class="interests">
+                  <input type="checkbox" id="interest[]" name="interest[]" value="todo">
+                  <label for="interest[]"> Things to Do </label>
+            </div>
+                
+            <div class="interests">
+                  <input type="checkbox" id="interest[]" name="interest[]" value="hiking">
+                  <label for="interest[]"> Hiking and Walking </label>
+            </div>
+            <div class="interests">
+                  <input type="checkbox" id="interest[]" name="interest[]" value="events">
+                  <label for="interest[]"> Events </label>
+            </div>
+            <div class="interests">
+                  <input type="checkbox" id="interest[]" name="interest[]" value="accommodation">
+                  <label for="interest[]"> Places to Stay </label>
+            </div>
+            <div class="interests">
+                  <input type="checkbox" id="interest[]" name="interest[]" value="dining">
+                  <label for="interest[]"> Places to Eat </label>
+            </div>
+        
+            </fieldset>
+         
+            <p>*required field</p>
+        
+            
+            <input type="submit" value="Go">  
+            
+           
+        <input type="hidden" name="recipe" value="Sheperd's Pie">
+        
+    </form>
+    
+    <div class="cancelbutton" id="cancel">Cancel</div>
+    
+    <p>
+        <a id="cancel" href="index.html"><img src="studentImages/button_cancel.png" alt="Cancel button"></a>
+    </p>
+        
+
+    
+    
+     <!--Footer-->
+
+    <footer class="container-footer"> 
+
+        <div class="logoFooter">
+            <a href="lit.html"><img src="images/logolimerick.svg" alt="Limerick Logo Limerick.ie"></a>
+        </div>
+
+        <nav class="navFooter">
+            <ul>
+                <li><a href="#" >Recent Events</a></li>
+                <li><a href="#" >Accomadation</a></li>
+                <li><a href="#" >Explore Limerick</a></li>
+                <li><a href="#" >Family Activities</a></li>
+                <li><a href="#" >Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="links">
+            <a href="#"><img src="Images/facebook.png" alt="Facebook logo"></a>
+            <a href="#"><img src="Images/twitter.png" alt="Twitter logo"></a>
+            <a href="#"><img src="Images/youtube.png" alt="Youtube logo"></a>  
+        </div>
+	
+</body>
+
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+	<title>Visit Limerick</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+
+    body
+    {
+        font-family: "Montserrat",sans-serif;
+        line-height: 1.5em;
+    }
+
+    .grid-container
+    {
+        display: grid;
+    }
+   
+    .Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navHeader a
+    {   
+        float: left;
+        display: block;
+        color:black;
+        font-weight: 600;
+        padding-left: 1em;
+    }
+
+    .navHeader a:hover
+    {
+        color:seagreen;
+    }
+        
+    .navHeader .icon {
+      display: none;
+    }
+
+    a
+    {
+        text-decoration: none;
+    }
+    
+    .Hero {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+        
+    .heroImg {
+       width: 100%;
+        max-width: 100%;
+    }
+        
+    .hero-text {
+    font-size: 0.5em;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+        line-height: 2em;
+    }
+
+    .section1-content1, .section1-content2, .section1-content3, .section1-content4, .section1-content5, .section1-content6, .section1-content7, .section1-content8 
+    {
+        margin-left: 1em;
+        box-shadow: 0 0 10px grey;
+    }
+
+    .section1-content1 a, .section1-content2 a, .section1-content3 a,.section1-content4 a, .section1-content5 a, .section1-content6 a, .section1-content7 a , .section1-content8 a 
+    {
+        color: black;
+    }
+        
+    .section1-content1 p, .section1-content2 p, .section1-content3 p,.section1-content4 p, .section1-content5 p, .section1-content6 p, .section1-content7 p , .section1-content8 p 
+    {
+        text-align: center;
+        font-size: 0.9em;
+        color: darkslategrey;
+    }
+        
+    .section1-content1 img, .section1-content2 img, .section1-content3 img,.section1-content4 img, .section1-content5 img, .section1-content6 img, .section1-content7 img, .section1-content8 img 
+    {
+        width: 100%;
+    }
+        
+    .section2-content2 img, .section3-content1 img {
+        width:70%;
+    }
+        
+    .section7 {
+        text-align: center;
+    }
+        
+    .section8-content1, .section8-content2, .section8-content3 {
+        box-shadow: 0 0 10px grey;
+        padding:1em;
+    }
+
+    footer
+    {
+        background-color: #000;
+        color:white;
+    }
+    footer a
+    {
+        color: #fff;
+        text-decoration: none;
+    }
+    footer li
+    {
+        list-style: none;
+    }
+
+    .logoFooter {
+        padding-top: 2em;        
+    }  
+
+    h4 {
+        text-align: center;
+    }
+
+    .headerText {
+        font-size: 2em;
+    }
+
+    .card1 p {
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+    .card1 h2 {
+        text-align: left;
+    }
+
+    .card1 {
+        padding: 1em 1em 1em 1em;
+        margin-right: 3em;
+    }
+        
+    .card2 p {
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+    .card2 h2 {
+        text-align: left;
+    }
+
+    .card2 {
+        padding: 1em 1em 1em 1em;
+    }
+
+
+    .button {
+        padding: 1rem;
+        font-weight: 600;
+        display: inline-flex;
+        background-color: seagreen;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .button:hover {
+        background-color: mediumseagreen;
+    }
+        
+    .section5-content1 img:hover, .section5-content2 img:hover {
+        opacity: 0.5;
+    }
+        
+    .section8-content1, .section8-content2, .section8-content3 {
+        margin-left: 6em;
+        text-align: center;
+    }
+        
+    .section8-content1 img, .section8-content2 img, .section8-content3 img {
+        width: 100%;
+    }
+
+    .section8-content1:hover, .section8-content2:hover, .section8-content3:hover {
+        opacity: 0.5;
+    }
+
+    .section1-content1:hover, .section1-content2:hover, .section1-content3:hover, .section1-content4:hover, .section1-content5:hover, .section1-content6:hover,.section1-content7:hover, .section1-content8:hover {
+        opacity: 0.5; 
+    }
+        
+    .Links {
+        display: flex;
+    } 
+
+    .Links a{
+        display: block;
+        float: left;
+        margin-left: 1em;
+        margin-top: 1em;
+    } 
+
+@media only screen and (min-width: 768px){
+    
+    .hero-text {
+        font-size: 1em;
+    }
+}
+                
+
+@media only screen and (min-width:992px)
+
+{
+
+    .grid-container{
+	   	grid-template-columns:repeat(16, 6.25%);
+        grid-row-gap:2em;
+	}
+
+    .logo img {
+        height: 3em;
+    }
+    
+    .Hero {
+        grid-column: 1/17;
+    }
+    
+    .hero-text {
+        font-size: 2em;
+    }
+    
+    .headerText {
+        grid-column: 4/9;
+    }
+    
+    .section1-content1 {
+        grid-column: 5/7;
+    }
+    
+    
+    .section1-content2 {
+        grid-column: 7/9;
+    }
+    
+    .section1-content3 {
+        grid-column: 9/11;
+    }
+
+    
+    .section1-content4 {
+        grid-column: 11/13;
+    }
+    
+    .section1-content5 {
+        grid-column: 5/7;
+    }
+    
+    .section1-content6 {
+        grid-column: 7/9;
+    }
+    
+    .section1-content7 {
+        grid-column: 9/11;
+    }
+    
+    .section1-content8 {
+        grid-column: 11/13;
+    }
+    
+    .section2-content1 {
+        grid-column: 5/9;
+    }
+    
+    .section2-content2 {
+        grid-column: 9/14;
+    }
+    
+    .section3-content1 {
+        grid-column: 5/9;
+    }
+    
+    
+    .section3-content2 {
+        grid-column: 9/12;
+    }
+    
+    
+    .section4-content1 {
+        grid-column: 5/9;
+    }
+    
+    
+    .section4-content2 {
+        grid-column: 9/13;
+    }
+    
+    .section4-content2 img {
+        max-width: 100%;
+    }
+    
+    
+    .section5-content1 {
+        grid-column: 4/8;
+    }
+    
+    
+    .section5-content2 {
+        grid-column: 9/12;
+    }
+    
+    .section5-content1, .section5-content2 h2 {
+        text-align: left;
+    }
+
+
+    .section6-content1 {
+        grid-column: 3/9;
+    }
+    
+    .section6-content2 {
+        grid-column: 9/1;
+        background-color: lightgrey;
+    }
+    
+    .card1 {
+        padding: 1em 1em 1em 1em;
+        margin-right: 3em;
+    }
+    
+    .section7 {
+        grid-column: 8/10;
+    }
+    
+    .section8-content1 {
+        grid-column: 4/7;
+    }
+    
+    .section8-content2 {
+        grid-column: 7/10;
+    }
+    
+    .section8-content3 {
+        grid-column: 10/13;
+    }
+    
+    
+    .container-footer {
+        margin: 3em;
+        display: grid;
+        grid-template-columns:repeat(16, 6.25%); 
+    }
+    
+    .logoFooter {
+        grid-column: 4/7;
+    }
+    
+    .navFooter {
+        grid-column: 9/11;
+        padding-top: 1em;
+    }
+    
+    
+        }
+
+    @media screen and (max-width: 600px) {
+      .navHeader a {display: none;}
+      .navHeader a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+        .navHeader.responsive {position: relative;}
+        .navHeader.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .navHeader.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    </style>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("TopMenu");
+          if (x.className === "navHeader") {
+            x.className += " responsive";
+          } else {
+            x.className = "navHeader";
+          }
+        }
+    </script>
+    
+</head>
+    
+<body>
+
+    
+        <div class="Header">
+            <div class="logo">
+                <a href="Limerick.html"><img src="Images/logolimerick.svg" alt="Limerick Logo"></a>
+            </div>
+
+            <nav class="navHeader" id="TopMenu">
+                  <a href="#">Events</a>
+                  <a href="#">Accomadation</a>
+                  <a href="#">Activities</a>
+                  <a href="#">Contact Us</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>              
+            </nav>
+        </div>
+          
+        <div class="grid-container">
+         
+        <div class="Hero">
+            <div class="hero-text">
+            <h1>The Riverside City</h1>
+            </div>
+            <img class="heroImg" src="Images/herolimerick.jpg" alt="hero image">
+        </div>  
+        
+        <div class="headerText"> 
+			<h2>Recent Events</h2>
+		</div>
+        
+        
+
+			<article class="section1-content1">
+			<a href="#"><img src="Images/section1img1.jpg" alt="Graffiti artist begins spraypainting Mural (Photo:Arthur Ellis Limerick.ie)">
+			<h4>Mural painting commences at UL City Centre Campus</h4>
+            <p>04 October 2022</p>
+			</a></article>
+
+			<article class="section1-content2">
+	        <a href="#"><img src="images/section1img2.jpg" alt="People hold up the poster containing the new QR Code (Photo: Alan Place Limerick.ie)">
+	        <h4>Launch of QR code for Drug and Alcohol Forum</h4>
+            <p>29 September 2022</p>
+			</a></article>
+
+			<article class="section1-content3">
+	        <a href="#"><img src="images/section1img3.jpg" alt="Mike Kelly with attendees of the book launch holding up their books (Photo: Shannon Group PLC Limerick.ie)">
+	        <h4>Mike Kelly's Life Story Book Launch at Shannon Airport</h4>
+            <p>29 September 2022</p>
+			</a></article>
+        
+			<article class="section1-content4">
+	        <a href="#"><img src="images/section1img4.jpg" alt="Childeren climbing a climbing wall Photo: Limerick.ie">
+	        <h4>Limerick prepares for Irish Youth Climbing Series</h4>
+            <p>28 September 2022</p>
+			</a></article>
+
+			<article class="section1-content5">
+	        <a href="#"><img src="images/section1img5.jpg" alt="Lough Gur comittee standing on the bank of the Lough Photo: Jakub Walutek Limerick.ie">
+	        <h4>Return of Student Night to Crescent Shopping Centre</h4>
+            <p>27 September 2022</p>
+		    </a></article>
+
+			<article class="section1-content6">
+	        <a href="#"><img src="images/section1img6.jpg" alt="Dr Ed Walsh at the Exhibition Photo:Alan Place Limerick.ie">
+            <h4>Green Heritage Site Accreditation Awarded to Lough Gur</h4>
+            <p>27 September 2022</p>
+			</a></article>
+        
+            <article class="section1-content7">
+	        <a href="#"><img src="images/section1img7.jpg" alt="Crescent Shopping Centre Photo:Limerick.ie">
+	        <h4>'Vital Papers' on display at UL presented by Dr Ed Walsh</h4>
+            <p>27 September 2022</p>
+			</a></article>
+        
+            <article class="section1-content8">
+	        <a href="#"><img src="images/section1img8.jpg" alt="Piece of ancient ceramic depicting a woman Photo:The Hunt Museum">
+	        <h4>Ancient Ceramics Experience in the Hunt Museum</h4>
+            <p>26 September 2022</p>
+			</a></article>
+        
+		
+
+            <div class="section2-content1">
+                <div class="card1"> 
+                    <h2>Where to Stay</h2> 
+                    <p>For a city breaks, luxury getaways, weekend trips or conferences Limerick has a vast range of top quality accommodation to suit your every need.</p>
+                    <div class="button"> 
+                        Accomadation
+                    </div>
+        	   </div>
+            </div>
+        
+        	<div class="section2-content2"><img src="images/Section2img1.jpg" alt="four student walking outside" ></div>
+		
+        
+        
+            <div class="section3-content1"><img src="images/Section2img2.jpg" alt="art student" ></div>
+        
+            <div class="section3-content2">
+                <div class="card2"> 
+                    <h2>Limerick Areas</h2> 
+                    <p>An ancient city on the banks of the mighty River Shannon, Limerick is bustling, vibrant and utterly individual. From its beautiful Georgian architecture and grand museums to its sport-obsessed locals, Limerick City will win you over with its unique charm.</p>
+                    <div class="button"> 
+                        Explore!
+                    </div>
+        	   </div>
+            </div>
+            
+        
+			
+            <div class="section4-content1">
+                <div class="card1"> 
+                    <h2>Limerick for Families</h2> 
+                    <p>There is plenty for families and children of all ages to see and do in Limerick whatever the weather or location. From tiny tots to teens, there are activities to suit everyone!</p>
+                    <div class="button"> 
+                        Activities
+                    </div>
+        	   </div>
+            </div>
+           
+            <div class="section4-content2"><img src="images/Section2img3.jpg" alt="student playing table tennis" ></div>
+                
+         
+        
+			<div class="section7">
+            <h1>Featured Articles</h1>
+            </div>
+        
+
+        
+			<article class="section8-content1">
+				<a href="#"><img src="images/section3img1.jpg" alt="Liam Browne"></a>
+				<h3>11 amazing reasons to visit Limerick</h3>
+			</article>
+
+			<article class="section8-content2">
+			<a href="#"><img src="images/section3img2.jpg" alt="LIT Street"></a>
+			<h3>11 Dog Friendly Places in Limerick</h3>
+			</article>
+
+			<article class="section8-content3">
+			<a href="#"><img src="images/section3img3.jpg" alt="staff outside athlone"></a>
+			<h3>11 Days Out for all the family</h3>
+			</article>
+
+			
+    </div>   
+    
+
+        <footer class="container-footer"> 
+            
+            
+			<div class="logoFooter">
+				
+				<a href="lit.html"><img src="images/logolimerick.svg" alt="Logo"></a>
+               
+            	
+			</div>
+
+			<nav class="navFooter">
+				<ul>
+					<li><a href="#" >Recent Events</a></li>
+					<li><a href="#" >Accomadation</a></li>
+					<li><a href="#" >Explore Limerick</a></li>
+					<li><a href="#" >Family Activities</a></li>
+					<li><a href="#" >Contact Us</a></li>
+				</ul>
+			</nav>
+            
+            <div class="Links">
+            
+            <a href="#"><img src="Images/facebook.png" alt="Facebook logo"></a>
+            
+            <a href="#"><img src="Images/twitter.png" alt="Twitter logo"></a>
+            
+            <a href="#"><img src="Images/youtube.png" alt="Youtube logo"></a>
+                
+            </div>
+
+        </footer>
+		
+
+
+</body>
+</html>
